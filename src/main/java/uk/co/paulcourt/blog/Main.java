@@ -11,6 +11,7 @@ import io.helidon.health.checks.HealthChecks;
 import io.helidon.media.jsonp.JsonpSupport;
 import io.helidon.metrics.MetricsSupport;
 import io.helidon.webserver.Routing;
+import io.helidon.webserver.StaticContentSupport;
 import io.helidon.webserver.WebServer;
 
 /**
@@ -88,6 +89,7 @@ public final class Main {
                 .register(health)                   // Health at "/health"
                 .register(metrics)                  // Metrics at "/metrics"
                 .register("/greet", greetService)
+                .register("/", StaticContentSupport.builder("htmlAssets"))
                 .build();
     }
 
