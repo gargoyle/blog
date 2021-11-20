@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js emptyPage" lang="en">
+    {{- partial "head.html" . -}}
+    
+    <body class="withFixedNav">
+        {{- partial "navigation.html" . -}}
+
+        <div class="jumbotron-fluid pageHero withFixedNav" 
+             style="background-image: url('{{ .Params.heroImageUrl | default "" }}')"
+             >
+            <div class="container-fluid">
+                <div class="container">
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" id="main-content">
+            {{ .Content }}
+        </div>
+
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

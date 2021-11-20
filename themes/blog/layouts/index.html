@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js emptyPage" lang="en">
+    {{- partial "head.html" . -}}
+
+    <body class="withFixedNav">
+        {{- partial "navigation.html" . -}}
+
+        <div class="jumbotron-fluid pageHero withFixedNav" 
+             style="background-image: url('{{ .Params.heroImageUrl | default "" }}')"
+             >
+            <div class="container-fluid">
+                <div class="container">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="main-content">
+
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+
+                    <!-- article list -->
+                    {{ range (.Site.RegularPages.ByParam "publishedOn").Reverse }}
+                    <div class="articleListItem {{ if .Draft }}notPublished{{ end }}">
+                        <h2 class="text-center mb-3">
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            <span class="articleDate">{{ .Params.created | time.Format "Monday, 2 January 2006" }}</span>
+                        </h2>
+                        <p>
+                            {{ .Summary | default "None" }}
+                        </p>
+                    </div>
+                    <hr>
+                    {{ end }}
+                    <!-- article list -->
+                </div>
+
+                <div class="col-sm-12 col-md-4 pt-4 text-center">
+                    <p>
+                        Hi. I'm <strong>Paul Court</strong>, a Software Engineer, DevOps, Gamer,
+                        Entrepreneur and general tinkerer of all things computer related.
+                    </p>
+                    <p>
+                        My ramblings here are mostly about software development with PHP
+                        and Java, Linux and server admin related things. Occasionally you might
+                        find some things relating to games and woodwork.
+                    </p>
+                    <hr/>
+                    Founder @ <a href="https://www.flxs.co.uk"><img src="/img/flxs-logo-small.png" alt="FLXS Logo"/></a>
+                    <hr/>
+                </div>
+            </div>  
+
+
+        </div>
+
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

@@ -1,0 +1,20 @@
+---
+baseURL: "/"
+languageCode: "en-gb"
+title: "Paul Court's Blog"
+theme: "blog"
+
+disableKinds:
+    - "RSS"
+
+uglyurls: true
+
+markup:
+    goldmark:
+        parser:
+            attribute:
+                block: true
+                title: true
+    highlight:
+        style: github
+        noClasses: true

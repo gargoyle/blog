@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js emptyPage" lang="en">
+    {{- partial "head.html" . -}}
+
+    <body class="withFixedNav">
+        {{- partial "navigation.html" . -}}
+
+        <div class="jumbotron-fluid pageHero withFixedNav" 
+             style="background-image: url('{{ .Params.heroImageUrl | default "/img/hero-bg.jpg" }}')"
+             >
+            <div class="container-fluid">
+                <div class="container">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="main-content">
+            <div class="row articleView">
+                <div class="col-sm-12 text-center articleIntro">
+                    <h1>{{ .Title }}</h1>
+                    <p class="summary">{{ .Summary }}</p>
+                </div>
+                
+                
+                <div class="col-sm-12 col-md-8">
+                    <article>
+                        {{ .Content }}
+                    </article>
+                </div>
+
+                <div class="col-sm-12 col-md-4 sidebar">
+                    <div class="articleMetaItem">
+                        <span class="label">This article is:</span>
+                        <span class="value big">xxx</span>
+                        <span class="tagline">days old</span>
+                    </div>
+
+                    <div class="articleMetaItem">
+                        <span class="label">Was published on:</span>
+                        <span class="value">{{ .Params.publishedOn | time.Format "Monday, 2 Jan 2006" }}</span>
+                    </div>
+
+                    <div class="articleMetaItem">
+                        <span class="label">Was last updated on:</span>
+                        <span class="value">{{ .Params.lastMod | default now | time.Format "Monday, 2 Jan 2006" }}</span>
+                    </div>
+
+
+                    <div class="articleMetaItem">
+                        <span class="label">was created on:</span>
+                        <span class="value">{{ .Params.Created | time.Format "Monday, 2 Jan 2006" }}</span>
+                    </div>
+
+                    {{ $created := .Params.Created | time }}
+                    {{ $published := .Params.publishedOn | time }}
+                    {{ $diff := $published.Sub $created }}
+                    <div class="articleMetaItem">
+                        <span class="label">It took about:</span>
+                        <span class="value big">{{ int (div $diff.Hours 24) }}</span>
+                        <span class="tagline">days to write</span>
+                    </div>
+
+                    <div class="articleMetaItem">
+                        <span class="label">Is tagged with:</span>
+                        <span class="value big">{{ .Params.tags }}</span>
+                    </div>
+
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
