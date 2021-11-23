@@ -10,7 +10,10 @@ slug: "removing-silex"
 ogImageUrl: "https://files.rgoyle.com/images/2019/replacing-silex/card-icon.png"
 ogSummary: "Walking through replacing the Silex framework behind this blog with.... nothing."
 
-tags: "Frameworks, Optimisation, PHP"
+tags:
+    - Frameworks
+    - Optimisation
+    - PHP
 
 draft: false
 

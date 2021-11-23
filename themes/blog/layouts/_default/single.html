@@ -31,7 +31,7 @@
                 <div class="col-sm-12 col-md-4 sidebar">
                     <div class="articleMetaItem">
                         <span class="label">This article is:</span>
-                        <span class="value big">xxx</span>
+                        <span class="value big daysAgo" data-publishedon="{{ .Params.publishedOn | time.Format "2006-01-02T15:04:05Z07:00" }}">0</span>
                         <span class="tagline">days old</span>
                     </div>
 
@@ -62,7 +62,7 @@
 
                     <div class="articleMetaItem">
                         <span class="label">Is tagged with:</span>
-                        <span class="value big">{{ .Params.tags }}</span>
+                        <span class="value big">{{ delimit .Params.tags ", " }}</span>
                     </div>
 
                     <hr>
@@ -72,4 +72,13 @@
 
         {{- partial "footer.html" . -}}
     </body>
+    <script>
+        $(document).ready(function(){
+            $('.daysAgo').each(function (i) {
+                let pubDate = new Date($(this).data().publishedon);
+                let now = new Date();
+                $(this).html(new Intl.NumberFormat().format(Math.round((now - pubDate)/(1000*60*60*24))));
+            });
+        });
+    </script>
 </html>

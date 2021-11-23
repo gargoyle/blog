@@ -10,7 +10,10 @@ slug: "radeon-vii-ubuntu"
 ogImageUrl: "https://files.paulcourt.co.uk/images/2019/radeon-vii/r.png"
 ogSummary: "Steps taken to get a new Radeon VII working under Ubuntu 19.04 ( and will probably work for 18.10)."
 
-tags: "Gaming, Hardware, Linux"
+tags: 
+    - Gaming
+    - Hardware
+    - Linux
 
 draft: false
 

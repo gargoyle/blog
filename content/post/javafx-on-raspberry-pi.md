@@ -10,7 +10,10 @@ slug: "javafx-on-raspberry-pi"
 ogImageUrl: "https://files.paulcourt.co.uk/images/common/pi-logo.svg"
 ogSummary: "Running JavaFX applications on the Raspberry Pi 4 + 7\" LCD touch using direct framebuffer rendering without installing a full desktop environment."
 
-tags: "Java, JavaFX, RaspberryPi"
+tags: 
+    - Java
+    - JavaFX
+    - RaspberryPi
 
 draft: false
 

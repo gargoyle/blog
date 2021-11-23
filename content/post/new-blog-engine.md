@@ -10,7 +10,10 @@ slug: "new-blog-engine"
 ogImageUrl: "https://files.paulcourt.co.uk/images/common/rss-square-orange.png"
 ogSummary: "I've rebuilt the blog software, updated the visuals and had a moment to reflect on things so far."
 
-tags: "Java, Helidon, Reflections"
+tags: 
+    - Java
+    - Helidon
+    - Reflections
 
 draft: false
 

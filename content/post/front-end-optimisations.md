@@ -10,7 +10,12 @@ slug: "front-end-optimisations"
 ogImageUrl: "https://files.paulcourt.co.uk/images/2019/front-end-optimisation/html5-logo.png"
 ogSummary: "Had a stab at optimising the front-end code for my site and reduced the total download size by 42%!"
 
-tags: "CSS, Frameworks, HTML, JavaScript, Optimisation"
+tags: 
+    - CSS
+    - Frameworks
+    - HTML
+    - JavaScript
+    - Optimisation
 
 draft: false
 

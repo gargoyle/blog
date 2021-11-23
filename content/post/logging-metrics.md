@@ -10,7 +10,10 @@ slug: "logging-metrics"
 ogImageUrl: "https://files.paulcourt.co.uk/images/2019/logging.png"
 ogSummary: "Some thoughts on setting up logging and metrics recording in your applications and throwing the rule-book out the window."
 
-tags: "Logging, Metrics, PHP"
+tags: 
+    - Logging
+    - Metrics
+    - PHP
 
 draft: false
 

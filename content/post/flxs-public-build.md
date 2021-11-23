@@ -10,7 +10,10 @@ slug: "flxs-public-build"
 ogImageUrl: "https://files.paulcourt.co.uk/images/2020/flxs-launch/logo-square.png"
 ogSummary: "Announcing FLXS - I'm fed up with privacy invading & spammy advertising driven web apps. So I'm doing something about it."
 
-tags: "FLXS, Founder, Startup"
+tags: 
+    - FLXS
+    - Founder
+    - Startup
 
 draft: false
 

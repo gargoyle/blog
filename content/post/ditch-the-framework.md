@@ -10,7 +10,10 @@ slug: "ditch-the-framework"
 ogImageUrl: "https://files.paulcourt.co.uk/images/2018/composer.png"
 ogSummary: "OK. Sharpen your pitchforks! I'm going to dive into why I think you should ditch your favourite PHP framework for anything other than MVPs."
 
-tags: "Frameworks, Opinion, PHP"
+tags: 
+    - Frameworks
+    - Opinion
+    - PHP
 
 draft: false
 

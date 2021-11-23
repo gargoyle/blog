@@ -10,7 +10,10 @@ slug: "pi-server-setup"
 ogImageUrl: "https://files.paulcourt.co.uk/images/common/pi-logo.svg"
 ogSummary: "The steps I take to get a Raspberry Pi server up and running out of the box (Or from a new blank SD card, etc)."
 
-tags: "quick, raspberry pi, raspbian"
+tags: 
+    - Quick
+    - RaspberryPi
+    - Raspbian
 
 draft: false
 

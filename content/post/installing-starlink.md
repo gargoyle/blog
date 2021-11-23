@@ -10,7 +10,8 @@ slug: "installing-starlink"
 ogImageUrl: "https://files.paulcourt.co.uk/images/2021/starlink_social_logo.jpg"
 ogSummary: "Walk-through of my Starlink installation & linking it to my existing Ubiquity based network."
 
-tags: "starlink"
+tags: 
+    - Starlink
 
 draft: false
 

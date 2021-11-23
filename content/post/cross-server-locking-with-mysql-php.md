@@ -10,7 +10,11 @@ slug: "cross-server-locking-with-mysql-php"
 ogImageUrl: "https://files.paulcourt.co.uk/images/2019/logo-mysql-170x115.png"
 ogSummary: "Quick Tip: Using MySQL as a lock source for running a single PHP process across multiple servers."
 
-tags: "HA, MySQL, PHP, Scale"
+tags: 
+    - HA
+    - MySQL
+    - PHP
+    - Scale
 
 draft: false
 

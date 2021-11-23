@@ -10,7 +10,11 @@ slug: "pi-swap"
 ogImageUrl: "https://files.paulcourt.co.uk/images/common/pi-logo.svg"
 ogSummary: "Just a quick note about disabling swap on Raspberry Pi's running Raspbian Buster."
 
-tags: "debian, quick, raspberry pi, raspbian"
+tags: 
+    - Debian
+    - Quick
+    - RaspberryPi
+    - Raspbian
 
 draft: false
 
