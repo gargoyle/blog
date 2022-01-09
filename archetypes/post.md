@@ -10,7 +10,9 @@ slug: ""
 ogImageUrl: ""
 ogSummary: ""
 
-tags: ""
+tags: 
+    - tag one
+    - tag two
 
 draft: true
 
