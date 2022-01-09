@@ -6,8 +6,8 @@ lastMod: 2022-01-09
 
 heroImageUrl: "https://files.paulcourt.co.uk/images/2021/serverless_bttf.jpg"
 
-ogImageUrl: ""
-ogSummary: ""
+ogImageUrl: "https://files.paulcourt.co.uk/images/2021/serverless_bttf.jpg"
+ogSummary: "Here's my writeup of transitioning this blog to static HTML and serverless hosting using Hugo and AWS"
 
 tags:
     - Serverless
