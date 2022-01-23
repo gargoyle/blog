@@ -6,6 +6,8 @@ theme: "blog"
 
 disableKinds:
     - "RSS"
+    - "taxonomy"
+    - "taxonomyTerm"
 
 uglyurls: true
 
