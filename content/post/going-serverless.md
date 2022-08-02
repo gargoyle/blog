@@ -147,7 +147,7 @@ Although the other meta-data changes when I edit articles. This was the only bit
 <span class="value big daysAgo" data-publishedon="{{ .Params.publishedOn | time.Format "2006-01-02T15:04:05Z07:00" }}">0</span>
 ```
 
-and update the display on the client-side with a bit of JavaScript...
+and update the display on the client-side with a bit of jQuery flavoured JavaScript...
 
 ```html
 <script>
