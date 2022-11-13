@@ -2,7 +2,7 @@
 title: "Installing Starlink"
 created: 2021-03-19T16:57:03Z
 publishedOn: 2021-04-03T21:57:03Z
-lastMod: 2021-04-03T21:57:03Z
+lastMod: 2022-11-07T22:10:00Z
 
 heroImageUrl: "https://files.paulcourt.co.uk/images/2021/starlink_skyline.jpg"
 slug: "installing-starlink"
@@ -18,7 +18,7 @@ draft: false
 summary: "After exploring just about every other option available and even the possibility of laying my own fibre, the Starlink beta has arrived in the UK and I jumped at the chance to get it. Here's a walk-through of my installation, setup and linking it to my existing Ubiquity based home network."
 ---
 
-Please keep in mind while reading this article that Starlink is in Beta and things are changing all the time.
+Please keep in mind while reading this article that Starlink was in Beta at the time of writing.
 {.alert .alert-info}
 
 
@@ -36,7 +36,7 @@ So even with the initial "pitch" of:- *Better than nothing, 50-150Mbps and proba
 
 ## Initial setup using Starlink router
 
-Getting everything setup is really simple. There's a two port power of ethernet (PoE) adaptor which powers both the dish and the router/hub. It's colour coded black and white which makes it really clear which cables go where. If you're thinking about using an existing PoE switch, then double check the power requirements. The Starlink supply is 56 volts (more than the 24 and 48 I have on all my other PoE gear) and the dish requires a fair amount of power.
+Getting everything setup is really simple. There's a two port power over ethernet (PoE) adaptor which powers both the dish and the router/hub. It's colour coded black and white which makes it really clear which cables go where. If you're thinking about using an existing PoE switch, then double check the power requirements. The Starlink supply is 56 volts (more than the 24 and 48 I have on all my other PoE gear) and the dish requires a fair amount of power.
 
 For an initial test, I put the dish out on the middle of the lawn with plenty of clear sky and ran the cable through the window to the router. Then joined the WiFi from my phone to complete the setup with the Starlink app. the first few initial speed tests came in between 30 and 80 mbps. I then hooked the "AUX" port upto my laptop and saw an instant increase to 120-140 mbps.
 
