@@ -21,16 +21,18 @@
 
                     <!-- article list -->
                     {{ range (.Site.RegularPages.ByParam "publishedOn").Reverse }}
+                    {{ if not .Draft }}
                     <div class="articleListItem {{ if .Draft }}notPublished{{ end }}">
                         <h2 class="text-center mb-3">
                             <a href="{{ .Permalink }}">{{ .Title }}</a>
-                            <span class="articleDate">{{ .Params.created | time.Format "Monday, 2 January 2006" }}</span>
+                            <span class="articleDate">{{ .Params.publishedOn | time.Format "Monday, 2 January 2006" }}</span>
                         </h2>
                         <p>
                             {{ .Summary | default "None" }}
                         </p>
                     </div>
                     <hr>
+                    {{ end }}
                     {{ end }}
                     <!-- article list -->
                 </div>
