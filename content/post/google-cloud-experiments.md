@@ -22,3 +22,64 @@ draft: false
 summary: "Here's what I learned when experimenting with using Cloud Run (a serverless platform for running stateless containers) to host a Java based website build using the Helidon framework."
 ---
 
+Having spent quite some time over the last few years using Amazon Web Services (AWS), I've decided I should get to know some of the other cloud platforms. So I set out on an experiment to get something up and running on Google Cloud Platform (GCP).
+
+The only thing I have done with GCP in the past is to manually launch a VM instance. However, this doesn't really give a lot of experience of the real advantages of "the cloud" - which is to have someone else do as much of the management for you as possible.
+
+With that in mind, I listed out the following objectives:-
+
+- Should be "serverless", or as close to as it can possibly be. I don't really want to get bogged down with managing operating systems, patching, upgrading, etc.
+- Should be on-demand and cost-effective. I'm not getting a lot of traffic at the moment, so I don't want to be wasting resources by having something sitting idle for 90% of the time.
+- Should rerequire minimal changes to my existing code (I'll go into more detail obout the app below).
+- Should be available on my own domain.
+- Should be automated as much as possible. Ideally using terraform and/or ansible.
+
+
+## Setting up GCP
+Setting up GCP was as easy as you might expect. Simply head over to [The signup page]() and complete the various forms and wizard steps.
+
+The only downside I experienced was that unlike AWS which starts with a blank canvas, GCP's setup wizard took me down a road attempting to setup all kinds of organisational structures, roles and permissions most of which seemed overkill for a small project (It's possible I clicked on something or chose an option to trigger this more complex setup route).
+
+With that being said, within half-an-hour I had the various registration and billing setup complete, and had downloaded and authenticated the `gcloud` CLI app for interacting with the various APIs provided by GCP.
+
+
+## The application
+The application is a [Helidon SE](https://helidon.io/docs/v3/#/se/guides/quickstart) application which uses Freemarker to render some pages on the fly to produce the main FLXS website (https://flxs.co.uk).
+
+This is a simple application at the moment, but will eventually hook into other services in the future. 
+
+The application is self contained and doesn't require any other tooling. The frameworks webserver component is currently built upon [Netty](https://netty.io), and it can directly handle HTTP requests efficiently without the need for another "front end" webserver such as nginx.
+
+By making use of the Java jlink functionality, the application can be built with a custom JVM which only includes the parts of the JVM required by the app and optimised for the target platform. 
+
+Combining this with a minimal debian image yields a nice compact docker container of around just 76MB. This means we can have a few images held in [GCP Artifact Registry](https://cloud.google.com/artifact-registry/pricing) while still being well under the Free usage tier - bonus!
+
+The only custom requirement from CGP Cloud Run was that the application would accept a `PORT` environment variable to determine the port it should listen to for incoming requests. This ws a single line change.
+
+Using the CGP web console, I manually created a docker variant of an [Artifact Registry](). I'll come back to this later to highlight why, but I configured it to be in `europe-west4` (Netherlands).
+
+I could then use `gcloud` to authenticate docker:-
+
+```
+$ gcloud auth
+```
+
+And build and push my application container to the registry.
+
+```
+$ docker build --tag xxxx .
+$ docker push xxx
+```
+
+## Cloud Run
+I'd heard of GKE (Google Kubernetes Engine)
+- What is it.
+
+## Custom domain
+- DNS, name transfer
+
+### Not all locations are equal
+- Complex global loadbalancer setup (reference googles own post)
+- Custom domains allowed in europe-west4 and not london. (blame it on Brexit)
+- Much simpler terraform.
+
